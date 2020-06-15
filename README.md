@@ -32,7 +32,7 @@ yarn start
 
 # Field Field JSON Schema
 
-The form is generated from JSON array for IFormFieldConfig schema:
+The form is generated from array of IFormFieldConfig interface:
 
 ## IFormFieldConfig
 
