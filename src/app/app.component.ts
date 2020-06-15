@@ -79,6 +79,7 @@ export class AppComponent implements OnInit {
     }
   ]`;
 
+  isJsonValid = true;
   editorOptions: any = { maxLines: 1000, printMargin: false };
 
   fieldConfig: IFormFieldConfig[];
@@ -94,13 +95,15 @@ export class AppComponent implements OnInit {
   }
 
   onEditorTextChange(code) {
-    console.log("new code", code);
-    if(this.isJSON(code)) {
-      this.onGenerateForm();
-    }
+    console.log("New JSON", code);
+    this.onGenerateForm();
   }
 
   onGenerateForm() : void {
+    this.isJsonValid = this.isJSON(this.jsonSchema);
+    if (!this.isJsonValid) {
+      return;
+    }
     this.fieldConfig = JSON.parse(this.jsonSchema);
     console.log(this.fieldConfig);
     this.fieldConfigs$.next(this.fieldConfig);

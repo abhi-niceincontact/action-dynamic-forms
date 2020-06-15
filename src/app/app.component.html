@@ -10,6 +10,7 @@
     <!-- Schema Editor -->
     <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
       <div  class="mat-title">Schema Editor</div>
+      <div *ngIf="!this.isJsonValid" class="w-100-p" style="background-color: crimson; color:white;">&nbsp;Invalid JSON</div>
       <div ace-editor [(text)]="jsonSchema"
       [mode]="'json'"
       [theme]="'monokai'"
