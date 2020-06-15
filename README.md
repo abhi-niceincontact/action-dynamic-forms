@@ -30,9 +30,9 @@ yarn start
 ```
 ![Demo App Screenshot](docs/images/demo-app.PNG)
 
-# Field Field JSON Schema
+# Form Field JSON Schema
 
-The form is generated from array of IFormFieldConfig interface:
+The form is generated from array of IFormFieldConfig object:
 
 ## IFormFieldConfig
 
