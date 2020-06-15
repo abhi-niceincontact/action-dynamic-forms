@@ -13,21 +13,22 @@ The ActionDynamicForms creates dynamic form using JSON schema.
 To get started locally, follow these instructions:
 
 1. Clone to your local computer using `git`.
-1. Make sure that you have Node 10.13 or later installed. See instructions [here](https://nodejs.org/en/download/).
-1. Make sure that you have `yarn` installed; see instructions [here](https://yarnpkg.com/lang/en/docs/install/).
-1. Install the Angular CLI globally.
+2. Make sure that you have Node 10.13 or later installed. See instructions [here](https://nodejs.org/en/download/).
+3. Make sure that you have `yarn` installed; see instructions [here](https://yarnpkg.com/lang/en/docs/install/).
+4. Install the Angular CLI globally.
 ```shell
 npm install -g @angular/cli
 ```
-1. Run `yarn` (no arguments) from the root of your clone of this project to install dependencies.
+5. Run `yarn` (no arguments) from the root of your clone of this project to install dependencies.
 ```shell
-cd <path-to-action-dynamic-form>
+cd <path-to-action-dynamic-form-folder>
 yarn
 ```
-1. Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+6. Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ```shell
 yarn start
 ```
+![Demo App Screenshot](docs/images/run-configurations.png)
 
 ## Development server
 
