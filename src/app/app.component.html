@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="start start">
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="16px">
   <!-- Header -->
   <div  class="w-100-p mat-elevation-z2" fxLayout="row" fxLayoutAlign="start start">
     <mat-toolbar color="primary">
@@ -6,8 +6,32 @@
     </mat-toolbar>
   </div>
   <!-- Content -->
-  <div  class="w-100-p" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
-    <div fxFlex="50%">Schema Container</div>
-    <div fxFlex="50%">Output form</div>
+  <div  class="w-100-p p-24" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="16px">
+    <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+      <div class="mat-title">Schema Editor</div>
+      <div ace-editor [(text)]="jsonSchema"
+      [mode]="'json'"
+      [theme]="'monokai'"
+      [options]="editorOptions"
+      [readOnly]="false"
+      [autoUpdateContent]="true"
+      [durationBeforeCallback]="1000"
+      (textChanged)="onEditorTextChange($event)"
+      style="min-height: 500px; width:100%; overflow: auto;"></div>
+      <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="8px">
+        <button type="button" mat-raised-button color="primary" (click)="onGenerateForm()">Generate Form</button>
+      </div>
+    </div>
+    <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+      <div class="mat-title">Output Form</div>
+      <div class="w-100-p">
+        <app-dynamic-form [fieldConfigs]="fieldConfigs$ | async" (submit)="onSubmit($event)"></app-dynamic-form>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="mat-title">Form Value</div>
+      <div class="w-100-p" style="background-color: #eee; border-radius: 4px;">
+        <span>{{formOutputValue | json}}</span>
+      </div>
+    </div>
   </div>
 </div>

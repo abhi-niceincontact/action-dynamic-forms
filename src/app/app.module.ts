@@ -9,6 +9,12 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 // Material Modules
 import { MatToolbarModule} from '@angular/material/toolbar';
+import { FormComponentsModule } from './core/form-components/form-components.module';
+
+// Third Party Module
+import { AceEditorModule } from 'ng2-ace-editor';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,11 @@ import { MatToolbarModule} from '@angular/material/toolbar';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    FlexLayoutModule
+    MatButtonModule,
+    MatDividerModule,
+    FlexLayoutModule,
+    FormComponentsModule,
+    AceEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
