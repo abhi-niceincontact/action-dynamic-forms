@@ -38,10 +38,10 @@ The form is generated from JSON array for IFormFieldConfig schema:
 
 | Property | Type | Description | Examples |
 |---|---|---|---|
-**type** | FormFieldType (required) | Type of the field. | `'input' | 'textarea' | 'checkbox' | 'radio' | 'select'`
+**type** | FormFieldType (required) | Type of the field. | `'input' &#124; 'textarea' &#124; 'checkbox' &#124; 'radio' &#124; 'select'`
 **label** | string (optional) | Label of the field. | 
 **name** | string (required) | Form/Model name of the field. | 
-**inputType** | string | Type of input field. | `'text' | 'email' | 'number'`
+**inputType** | string | Type of input field. | `'text' &#124; 'email' &#124; 'number'`
 **options** | TextValuePair[] (optional) | Array of values for select, radio form field. | `[{ "value": true, "text": "Yes"},{ "value": false, "text": "No"}]`
 **value** | any (optional) | Initial value of the field. | 
 **required** | boolean (optional) | Whether the form field is required. | 
