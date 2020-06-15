@@ -28,7 +28,7 @@ yarn
 ```shell
 yarn start
 ```
-![Demo App Screenshot](docs/images/run-configurations.png)
+![Demo App Screenshot](docs/images/demo-app.PNG)
 
 ## Development server
 
