@@ -7,8 +7,9 @@
   </div>
   <!-- Content -->
   <div  class="w-100-p p-24" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="16px">
+    <!-- Schema Editor -->
     <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
-      <div class="mat-title">Schema Editor</div>
+      <div  class="mat-title">Schema Editor</div>
       <div ace-editor [(text)]="jsonSchema"
       [mode]="'json'"
       [theme]="'monokai'"
@@ -17,18 +18,18 @@
       [autoUpdateContent]="true"
       [durationBeforeCallback]="1000"
       (textChanged)="onEditorTextChange($event)"
-      style="min-height: 500px; width:100%; overflow: auto;"></div>
-      <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="8px">
+      style="min-height: 400px; width:100%; overflow: auto;"></div>
+      <div class="w-100-p" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="8px">
         <button type="button" mat-raised-button color="primary" (click)="onGenerateForm()">Generate Form</button>
       </div>
     </div>
+    <!-- Output Form -->
     <div fxFlex="50%" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
       <div class="mat-title">Output Form</div>
       <div class="w-100-p">
         <app-dynamic-form [fieldConfigs]="fieldConfigs$ | async" (submit)="onSubmit($event)"></app-dynamic-form>
       </div>
-      <mat-divider></mat-divider>
-      <div class="mat-title">Form Value</div>
+      <div class="mat-title border-top w-100-p mt-16">Form Value</div>
       <div class="w-100-p" style="background-color: #eee; border-radius: 4px;">
         <span>{{formOutputValue | json}}</span>
       </div>
