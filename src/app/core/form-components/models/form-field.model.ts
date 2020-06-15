@@ -8,7 +8,7 @@ export interface TextValuePair {
 export interface IFormFieldConfig {
   type: FormFieldType;
   label?: string;
-  name?: string;
+  name: string;
   inputType?: string;
   options?: TextValuePair[];
   value?: any;

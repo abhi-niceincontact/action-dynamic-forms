@@ -30,6 +30,27 @@ yarn start
 ```
 ![Demo App Screenshot](docs/images/demo-app.PNG)
 
+# Field Field JSON Schema
+
+The form is generated from JSON array for IFormFieldConfig schema:
+
+## IFormFieldConfig
+
+| Property | Type | Description | Examples |
+|---|---|---|---|
+**type** | FormFieldType (required) | Type of the field. | `'input' | 'textarea' | 'checkbox' | 'radio' | 'select'`
+**label** | string (optional) | Label of the field. | 
+**name** | string (required) | Form/Model name of the field. | 
+**inputType** | string | Type of input field. | `'text' | 'email' | 'number'`
+**options** | TextValuePair[] (optional) | Array of values for select, radio form field. | `[{ "value": true, "text": "Yes"},{ "value": false, "text": "No"}]`
+**value** | any (optional) | Initial value of the field. | 
+**required** | boolean (optional) | Whether the form field is required. | 
+**size** | string (optional) | Width of the form field. | `100% or 200px`
+**minLength** | number (optional) | Min length of the input form field. | 
+**maxLength** | number (optional) | Max length of the input form field. | 
+**hint** | string (optional) | Text for the form field hint. | 
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
